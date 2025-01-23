@@ -42,9 +42,6 @@ public class CityController {
         if (optionalCity.isPresent()) {
             City city = optionalCity.get();
             city.setName(updatedCity.getName());
-            city.setResidentAmount(updatedCity.getResidentAmount());
-            city.setDescription(updatedCity.getDescription());
-            city.setImage(updatedCity.getImage());
             return ResponseEntity.ok().body(cityRepository.save(city));
         } else {
             return ResponseEntity.notFound().build();

@@ -2,27 +2,21 @@ package com.luismibm.SimpleTable.model;
 
 import jakarta.persistence.*;
 
-@Entity @Table(name = "cities")
+@Entity @Table(name = "CITY")
 public class City {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
-
-    @Column(nullable = false)
-    String name;
-    int residentAmount;
-    String description;
-    String image;
+    @Id
+    private long id;
+    private String name;
+    private long provinceId;
 
     public City() {
     }
 
-    public City(long id, String name, int residentAmount, String description, String image) {
+    public City(long id, String name, long provinceId) {
         this.id = id;
         this.name = name;
-        this.residentAmount = residentAmount;
-        this.description = description;
-        this.image = image;
+        this.provinceId = provinceId;
     }
 
     public long getId() {
@@ -41,28 +35,12 @@ public class City {
         this.name = name;
     }
 
-    public int getResidentAmount() {
-        return residentAmount;
+    public long getProvinceId() {
+        return provinceId;
     }
 
-    public void setResidentAmount(int residentAmount) {
-        this.residentAmount = residentAmount;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
+    public void setProvinceId(long provinceId) {
+        this.provinceId = provinceId;
     }
 
 }
