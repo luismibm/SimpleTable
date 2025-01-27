@@ -1,8 +1,8 @@
 package com.luismibm.SimpleTable.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity @Table(name = "COUNTRY")
 public class Country {
@@ -10,6 +10,9 @@ public class Country {
     @Id
     private long id;
     private String name;
+
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Province> provinces;
 
     public Country() {
 

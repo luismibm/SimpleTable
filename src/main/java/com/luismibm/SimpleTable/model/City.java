@@ -8,15 +8,17 @@ public class City {
     @Id
     private long id;
     private String name;
-    private long provinceId;
+
+    @ManyToOne @JoinColumn(name = "province_id")
+    private Province province;
 
     public City() {
     }
 
-    public City(long id, String name, long provinceId) {
+    public City(long id, String name, Province province) {
         this.id = id;
         this.name = name;
-        this.provinceId = provinceId;
+        this.province = province;
     }
 
     public long getId() {
@@ -35,12 +37,12 @@ public class City {
         this.name = name;
     }
 
-    public long getProvinceId() {
-        return provinceId;
+    public Province getProvince() {
+        return province;
     }
 
-    public void setProvinceId(long provinceId) {
-        this.provinceId = provinceId;
+    public void setProvince(Province province) {
+        this.province = province;
     }
 
 }
