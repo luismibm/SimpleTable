@@ -8,6 +8,7 @@ public class City {
     @Id
     private long id;
     private String name;
+    private int population;
 
     @ManyToOne @JoinColumn(name = "province_id")
     private Province province;
@@ -45,4 +46,11 @@ public class City {
         this.province = province;
     }
 
+    public void setPopulation(int population) {
+        this.population = population;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
 }
