@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Cities</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Countries List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="c : ${countries}">
+        <td th:text="${c.id}"></td>
+        <td th:text="${c.name}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

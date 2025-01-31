@@ -11,9 +11,6 @@ public class Province {
     private long id;
     private String name;
 
-    // @Column(name = "country_id")
-    // private long countryId;
-
     @OneToMany(mappedBy = "province", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<City> cities;
 

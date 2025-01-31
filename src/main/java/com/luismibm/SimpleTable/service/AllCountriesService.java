@@ -5,18 +5,12 @@ import com.luismibm.SimpleTable.model.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
-public class CountryGetAllService {
+public class AllCountriesService {
 
-    @Autowired
-    private CountryRepository countryRepository;
+    @Autowired private CountryRepository countryRepository;
 
-    public List<Country> getAllCountries() {
+    public Iterable<Country> getAllCountries() {
         return countryRepository.findAll();
     }
-
-    // Create: getCountryById
-
 }
