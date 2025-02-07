@@ -1,7 +1,7 @@
 package com.luismibm.SimpleTable.service;
 
-import com.luismibm.SimpleTable.model.Province;
-import com.luismibm.SimpleTable.model.ProvinceRepository;
+import com.luismibm.SimpleTable.model.entity.Province;
+import com.luismibm.SimpleTable.model.repository.ProvinceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

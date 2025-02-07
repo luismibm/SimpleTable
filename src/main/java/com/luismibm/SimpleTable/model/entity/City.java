@@ -1,4 +1,4 @@
-package com.luismibm.SimpleTable.model;
+package com.luismibm.SimpleTable.model.entity;
 
 import jakarta.persistence.*;
 
@@ -13,12 +13,14 @@ public class City {
     @ManyToOne @JoinColumn(name = "province_id")
     private Province province;
 
-    public City() {
-    }
+    // @ManyToMany
 
-    public City(long id, String name, Province province) {
+    public City() { }
+
+    public City(long id, String name, int population, Province province) {
         this.id = id;
         this.name = name;
+        this.population = population;
         this.province = province;
     }
 

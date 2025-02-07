@@ -1,6 +1,11 @@
 package com.luismibm.SimpleTable.service;
 
-import com.luismibm.SimpleTable.model.*;
+import com.luismibm.SimpleTable.model.entity.City;
+import com.luismibm.SimpleTable.model.entity.Country;
+import com.luismibm.SimpleTable.model.entity.Province;
+import com.luismibm.SimpleTable.model.repository.CityRepository;
+import com.luismibm.SimpleTable.model.repository.CountryRepository;
+import com.luismibm.SimpleTable.model.repository.ProvinceRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

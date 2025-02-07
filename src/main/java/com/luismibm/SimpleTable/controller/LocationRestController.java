@@ -1,13 +1,11 @@
 package com.luismibm.SimpleTable.controller;
 
-import com.luismibm.SimpleTable.model.City;
-import com.luismibm.SimpleTable.model.Country;
-import com.luismibm.SimpleTable.model.Province;
+import com.luismibm.SimpleTable.model.entity.City;
+import com.luismibm.SimpleTable.model.entity.Province;
 import com.luismibm.SimpleTable.service.CityMinPopulationService;
 import com.luismibm.SimpleTable.service.ProvinceGetByCountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

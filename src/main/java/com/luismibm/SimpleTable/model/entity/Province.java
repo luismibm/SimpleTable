@@ -1,4 +1,4 @@
-package com.luismibm.SimpleTable.model;
+package com.luismibm.SimpleTable.model.entity;
 
 import jakarta.persistence.*;
 
