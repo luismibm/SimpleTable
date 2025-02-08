@@ -2,6 +2,8 @@ package com.luismibm.SimpleTable.model.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity @Table(name = "CITY")
 public class City {
 
@@ -13,7 +15,14 @@ public class City {
     @ManyToOne @JoinColumn(name = "province_id")
     private Province province;
 
-    // @ManyToMany
+    // https://www.baeldung.com/jpa-many-to-many
+    @ManyToMany
+    @JoinTable (
+            name = "CITY-FRANCHISE",
+            joinColumns = @JoinColumn(name = "ID_FRANCHISE"),
+            inverseJoinColumns = @JoinColumn(name = "ID_CITY")
+    )
+    Set<Franchise> franchises;
 
     public City() { }
 
@@ -55,4 +64,13 @@ public class City {
     public int getPopulation() {
         return population;
     }
+
+    public Set<Franchise> getFranchises() {
+        return franchises;
+    }
+
+    public void setFranchises(Set<Franchise> franchises) {
+        this.franchises = franchises;
+    }
+
 }
